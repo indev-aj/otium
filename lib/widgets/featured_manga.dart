@@ -16,13 +16,13 @@ class _FeaturedMangaState extends State<FeaturedManga> {
       alignment: Alignment.center,
       overflow: Overflow.visible,
       children: [
-        SizedBox(height: 25),
         Container(
-          height: (deviceHeight * 0.25) - AppBar().preferredSize.height,
+          height: deviceHeight * 0.15,
           width: deviceWidth,
           color: Color(0XFF0096FA),
           child: Column(
             children: [
+              SizedBox(height: 5),
               Text(
                 'Featured',
                 style: TextStyle(

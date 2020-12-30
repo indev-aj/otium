@@ -14,7 +14,7 @@ class HorizontalMangaCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 245,
+      height: 240,
       width: 191,
       decoration: BoxDecoration(
         color: Colors.white,
@@ -65,57 +65,31 @@ class HorizontalMangaCard extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.pinkAccent,
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                  child: Padding(
-                    padding: EdgeInsets.all(5),
-                    child: Text(
-                      'Action',
-                      style: TextStyle(
-                        fontSize: 12.0,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
-                ),
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.amber[900],
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                  child: Padding(
-                    padding: EdgeInsets.all(5),
-                    child: Text(
-                      'Horror',
-                      style: TextStyle(
-                        fontSize: 12.0,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
-                ),
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.cyan,
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                  child: Padding(
-                    padding: EdgeInsets.all(5),
-                    child: Text(
-                      'Isekai',
-                      style: TextStyle(
-                        fontSize: 12.0,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
-                ),
+                mangaCard('Action', Colors.pinkAccent),
+                mangaCard('Horror', Colors.amber[900]),
+                mangaCard('Isekai', Colors.cyan),
               ],
             ),
           ],
+        ),
+      ),
+    );
+  }
+
+  Widget mangaCard(String genre, Color color) {
+    return Container(
+      decoration: BoxDecoration(
+        color: color,
+        borderRadius: BorderRadius.circular(5),
+      ),
+      child: Padding(
+        padding: EdgeInsets.all(5),
+        child: Text(
+          genre,
+          style: TextStyle(
+            fontSize: 12.0,
+            color: Colors.white,
+          ),
         ),
       ),
     );

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class CustomAppBar extends StatefulWidget {
   @override
@@ -16,23 +15,35 @@ class _CustomAppBarState extends State<CustomAppBar> {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           IconButton(
-              icon: Icon(
-                Icons.dashboard,
-                color: Colors.white,
-              ),
-              onPressed: () {}),
+            splashColor: Colors.transparent,
+            highlightColor: Colors.transparent,
+            icon: Icon(
+              Icons.dashboard,
+              color: Colors.white,
+            ),
+            onPressed: () {
+              print('Change View Button has been pressed!');
+            },
+          ),
           Text(
             'otium',
-            style: GoogleFonts.poppins(
-              textStyle: TextStyle(color: Colors.white, fontSize: 24.0),
+            style: TextStyle(
+              fontSize: 24.0,
+              color: Colors.white,
+              fontWeight: FontWeight.w400,
             ),
           ),
           IconButton(
-              icon: Icon(
-                Icons.notifications,
-                color: Colors.white,
-              ),
-              onPressed: () {}),
+            splashColor: Colors.transparent,
+            highlightColor: Colors.transparent,
+            icon: Icon(
+              Icons.notifications,
+              color: Colors.white,
+            ),
+            onPressed: () {
+              print('Notification Button has been pressed!');
+            },
+          ),
         ],
       ),
     );
