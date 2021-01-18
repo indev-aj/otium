@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:otium/widgets/horizontal_manga_list.dart';
+import 'package:otium/future_use/horizontal_manga_list.dart';
 
 class FeaturedManga extends StatefulWidget {
   @override
@@ -34,6 +34,21 @@ class _FeaturedMangaState extends State<FeaturedManga> {
             ],
           ),
         ),
+        // Positioned(
+        //   top: 50,
+        //   child: Container(
+        //     height: 200,
+        //     width: deviceWidth,
+        //     child: ListView(
+        //       children: [
+        //         HorizontalMangaCard(imageUrl: 'asset/image/1.jpg', mangaName: 'Shishido Senpai', mangaAuthor: 'Kurosawa Yuki'),
+        //         HorizontalMangaCard(imageUrl: 'asset/image/1.jpg', mangaName: 'Shishido Senpai', mangaAuthor: 'Kurosawa Yuki'),
+        //         HorizontalMangaCard(imageUrl: 'asset/image/1.jpg', mangaName: 'Shishido Senpai', mangaAuthor: 'Kurosawa Yuki'),       
+        //       ],
+        //     ),
+        //   ),
+        // ),
+
         Positioned(
           top: 50,
           child: HorizontalMangaList(),

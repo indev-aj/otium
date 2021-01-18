@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:otium/widgets/custom_appbar.dart';
-import 'package:otium/widgets/featured_manga.dart';
-
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -9,14 +6,40 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  final Color blue = Color(0XFF0096FA);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.white,
         elevation: 0,
-        title: CustomAppBar(),
+        centerTitle: true,
+        leading: IconButton(
+          icon: Icon(
+            Icons.dashboard,
+            color: blue,
+          ),
+          onPressed: null,
+        ),
+        title: Text(
+          'otium',
+          style: TextStyle(
+            fontSize: 24.0,
+            color: blue,
+            fontWeight: FontWeight.w400,
+          ),
+        ),
+        actions: [
+          IconButton(
+            icon: Icon(
+              Icons.notifications,
+              color: blue,
+            ),
+            onPressed: null,
+          ),
+        ],
       ),
-      body: FeaturedManga(),
     );
   }
 }
