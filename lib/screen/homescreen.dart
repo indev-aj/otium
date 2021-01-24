@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:otium/widgets/featured_manga.dart';
+import 'package:otium/widgets/latest_manga.dart';
+import 'package:otium/widgets/custom_app_bar.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -11,34 +14,36 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        elevation: 0,
-        centerTitle: true,
-        leading: IconButton(
-          icon: Icon(
-            Icons.dashboard,
-            color: blue,
+      appBar: appBar(blue),
+      body: Container(
+        color: Colors.white,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 15.0),
+          child: ListView(
+            children: [
+              headline('Featured Manga'),
+              SizedBox(height: 5),
+              FeaturedManga(),
+              SizedBox(height: 30),
+              headline('Latest Manga'),
+              SizedBox(height: 5),
+              LatestManga(),
+              SizedBox(height: 15),
+              LatestManga(),
+            ],
           ),
-          onPressed: null,
         ),
-        title: Text(
-          'otium',
-          style: TextStyle(
-            fontSize: 24.0,
-            color: blue,
-            fontWeight: FontWeight.w400,
-          ),
-        ),
-        actions: [
-          IconButton(
-            icon: Icon(
-              Icons.notifications,
-              color: blue,
-            ),
-            onPressed: null,
-          ),
-        ],
+      ),
+    );
+  }
+
+  Text headline(String headline) {
+    return Text(
+      headline,
+      style: TextStyle(
+        fontSize: 16.0,
+        color: blue,
+        fontWeight: FontWeight.bold,
       ),
     );
   }
